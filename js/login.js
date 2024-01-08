@@ -1,6 +1,6 @@
 async function loginUser() {
     // Local Host
-    const Url = 'https://eclipse.herobuxx.me/api/auth';
+    const Url = 'https://eclipse.herobuxx.me/api/admin/auth';
 
     // Get values from input elements
     const username = document.getElementById('username').value;
@@ -27,7 +27,7 @@ async function loginUser() {
 
         if (token !== undefined) {
             // Set the token in a cookie
-            document.cookie = `token=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
+            document.cookie = `token_adm=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
             console.log('Login successful');
             window.location.href = 'https://tunes.herobuxx.me/tickets';
         } else {
