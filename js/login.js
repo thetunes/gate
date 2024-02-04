@@ -1,6 +1,6 @@
 async function loginUser() {
     // Local Host
-    const Url = 'https://eclipse.herobuxx.me/api/admin/auth';
+    const Url = 'http://34.128.102.98/api/admin/auth';
 
     // Get values from input elements
     const username = document.getElementById('username').value;
@@ -29,7 +29,7 @@ async function loginUser() {
             // Set the token in a cookie
             document.cookie = `token_adm=${token}; expires=${new Date(responseData.expiresIn)}; path=/`;
             console.log('Login successful');
-            window.location.href = 'https://tunes.herobuxx.me/admin';
+            window.location.href = '/admin';
         } else {
             console.error('Token is undefined. Login failed.');
             // Display error message in the "notifier" div
